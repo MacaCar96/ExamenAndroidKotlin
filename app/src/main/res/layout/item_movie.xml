@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewPeliculas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground"
+        app:cardCornerRadius="@dimen/custom_card_view_radius"
+        app:cardElevation="@dimen/custom_card_view_elevation"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageViewPortada"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/custom_card_view_image"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/prueba" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textViewTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/custom_size_10dp"
+                android:paddingTop="@dimen/custom_size_10dp"
+                android:paddingRight="@dimen/custom_size_10dp"
+                android:paddingBottom="@dimen/custom_size_2dp"
+                android:text="Spider-Man: No Way Home"
+                android:textSize="@dimen/custom_size_20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewFecha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/custom_size_10dp"
+                android:paddingTop="0dp"
+                android:paddingRight="@dimen/custom_size_10dp"
+                android:paddingBottom="@dimen/custom_size_10dp"
+                android:text="2021-12-15"
+                android:textSize="@dimen/custom_size_14dp" />
+
+            <TextView
+                android:id="@+id/textViewDescripcion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/custom_size_10dp"
+                android:paddingTop="@dimen/custom_size_0dp"
+                android:paddingRight="@dimen/custom_size_10dp"
+                android:paddingBottom="@dimen/custom_size_20dp"
+                android:text="Por primera vez en la historia cinematográfica de Spider-Man, nuestro héroe, vecino y amigo es desenmascarado, y por tanto, ya no es capaz de separar su vida normal de los enormes riesgos que conlleva ser un superhéroe. Cuando pide ayuda al Doctor Strange, los riesgos pasan a ser aún más peligrosos, obligándole a descubrir lo que realmente significa ser él." />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
