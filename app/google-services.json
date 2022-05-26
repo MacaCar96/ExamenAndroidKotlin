@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "251662780041",
+    "project_id": "examen-kotlin-1",
+    "storage_bucket": "examen-kotlin-1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:251662780041:android:bd4644510cdb38ad312858",
+        "android_client_info": {
+          "package_name": "com.macacar96.examenandroidkotlin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "251662780041-jc1ki92gesvcerdbtm025cvfujluev69.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYiP8jExMpSCbcZ5EFcZZGhpEuJQTCXzU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "251662780041-jc1ki92gesvcerdbtm025cvfujluev69.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
