@@ -29,4 +29,5 @@ class MoviePresenter(view: MovieMVP.View): MovieMVP.Presenter {
     override fun getInitPresenter(context: Context?) {
         TODO("Not yet implemented")
     }
+
 }

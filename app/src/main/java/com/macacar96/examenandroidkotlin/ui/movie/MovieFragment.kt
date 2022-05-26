@@ -54,4 +54,6 @@ class MovieFragment : Fragment(), MovieMVP.View {
             Toast.makeText(activity, result.toString(), Toast.LENGTH_LONG).show()
         })
     }
+
+
 }
