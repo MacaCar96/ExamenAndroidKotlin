@@ -36,9 +36,9 @@ class MainActivity : AppCompatActivity() {
     private val db = FirebaseFirestore.getInstance()
 
     // Tiempo para actualizar ubicación - 15 min = 900000 millis
-    private val TIME_UPDATE_LOCATION: Long = 8000
+    private val TIME_UPDATE_LOCATION: Long = 900000
 
-    private var locationManager : LocationManager? = null
+    private var locationManager: LocationManager? = null
 
     companion object {
         const val REQUEST_CODE_LOCATION = 0
@@ -84,8 +84,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     // Validate permiso
-    private fun enableLocation(){
-        if (!isLocationPermissionGranted()){
+    private fun enableLocation() {
+        if (!isLocationPermissionGranted()) {
             requestLocationPermission()
         }
     }
@@ -96,7 +96,7 @@ class MainActivity : AppCompatActivity() {
     ) == PackageManager.PERMISSION_GRANTED
 
     // Pedir permisos o agregarlos manualmente
-    private fun requestLocationPermission(){
+    private fun requestLocationPermission() {
         if (ActivityCompat.shouldShowRequestPermissionRationale(
                 this,
                 Manifest.permission.ACCESS_FINE_LOCATION
@@ -121,9 +121,13 @@ class MainActivity : AppCompatActivity() {
         grantResults: IntArray
     ) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        when(requestCode) {
-            REQUEST_CODE_LOCATION -> if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_DENIED){
-                Toast.makeText(this, "Para activar la localización  ve a ajustes y acepte los permisos", Toast.LENGTH_LONG).show()
+        when (requestCode) {
+            REQUEST_CODE_LOCATION -> if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_DENIED) {
+                Toast.makeText(
+                    this,
+                    "Para activar la localización  ve a ajustes y acepte los permisos",
+                    Toast.LENGTH_LONG
+                ).show()
             }
         }
     }
@@ -137,7 +141,7 @@ class MainActivity : AppCompatActivity() {
                 0f,
                 locationListener
             )
-        } catch(ex: SecurityException) {
+        } catch (ex: SecurityException) {
             Log.d("LOG-LOCATION", "Excepción de seguridad, no hay ubicación disponible")
         }
     }
@@ -150,13 +154,13 @@ class MainActivity : AppCompatActivity() {
 
         Log.d("LOG-LOOP", list[0].getAddressLine(0))
 
-        /* db.collection("locations").add(
+        db.collection("locations").add(
             hashMapOf(
                 "latitude" to location.latitude.toString(),
                 "longitude" to location.longitude.toString(),
                 "direction" to list[0].getAddressLine(0)
             )
-        ) */
+        )
 
     }
 
