@@ -11,6 +11,23 @@
     <string name="menu_photo">Capturar fotos</string>
     <string name="menu_user">Usuarios</string>
     <string name="menu_location">Ubicaciones</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Fragment photos -->
+    <string name="all">TODO</string>
+    <string name="upload">SUBIR ARCHIVOS</string>
+
+    <!-- Card Movie ItemFragment -->
+    <string name="card_movie_title">Spider-Man: No Way Home</string>
+    <string name="card_movie_date">2021–12–15</string>
+    <string name="card_movie_description">Por primera vez en la historia cinematográfica de Spider-Man, nuestro héroe, vecino y amigo es desenmascarado, y por tanto, ya no es capaz de separar su vida normal de los enormes riesgos que conlleva ser un superhéroe. Cuando pide ayuda al Doctor Strange, los riesgos pasan a ser aún más peligrosos, obligándole a descubrir lo que realmente significa ser él.</string>
+
+    <!-- Form User -->
+    <string name="full_name">Nombre completo</string>
+    <string name="phone">Teléfono</string>
+    <string name="email">Correo</string>
+    <string name="address">Dirección</string>
+    <string name="image">Imagen</string>
+    <string name="required">Requerido</string>
+    <string name="submit">Guardar</string>
+
 </resources>

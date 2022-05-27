@@ -3,6 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/HP/AndroidStudioProjects/ExamenAndroidKotlin/app/src/main/res/drawable/ic_baseline_location_on_24.xml" value="0.127" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/ExamenAndroidKotlin/app/src/main/res/drawable/ic_baseline_movie_24.xml" value="0.127" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/ExamenAndroidKotlin/app/src/main/res/drawable/ic_baseline_supervised_user_circle_24.xml" value="0.127" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/ExamenAndroidKotlin/app/src/main/res/drawable/ic_file_upload.xml" value="0.142" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/ExamenAndroidKotlin/app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.127" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/ExamenAndroidKotlin/app/src/main/res/drawable/side_nav_bar.xml" value="0.127" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/ExamenAndroidKotlin/app/src/main/res/layout/content_main.xml" value="0.11614583333333334" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/ExamenAndroidKotlin/app/src/main/res/layout/fragment_location.xml" value="0.12907608695652173" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/ExamenAndroidKotlin/app/src/main/res/layout/fragment_movie.xml" value="0.125" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/ExamenAndroidKotlin/app/src/main/res/layout/fragment_photo.xml" value="0.18568840579710144" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/ExamenAndroidKotlin/app/src/main/res/layout/fragment_user.xml" value="0.25" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/ExamenAndroidKotlin/app/src/main/res/layout/item_movie.xml" value="0.18" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/ExamenAndroidKotlin/app/src/main/res/layout/layout_loading_screen.xml" value="0.1109375" />
         <entry key="..\:/Users/Marco Carmen/Documents/AndroidStudioProjects/ExamenAndroidKotlin/app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.196" />
         <entry key="..\:/Users/Marco Carmen/Documents/AndroidStudioProjects/ExamenAndroidKotlin/app/src/main/res/layout/activity_main.xml" value="0.11820652173913043" />
         <entry key="..\:/Users/Marco Carmen/Documents/AndroidStudioProjects/ExamenAndroidKotlin/app/src/main/res/layout/app_bar_main.xml" value="0.11820652173913043" />

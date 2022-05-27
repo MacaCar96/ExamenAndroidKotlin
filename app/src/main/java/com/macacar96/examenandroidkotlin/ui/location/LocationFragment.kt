@@ -13,6 +13,7 @@ import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.google.firebase.firestore.FirebaseFirestore
+import com.macacar96.examenandroidkotlin.utils.NotificationDialog
 import com.macacar96.examenandroidkotlin.R
 
 
@@ -47,35 +48,55 @@ class LocationFragment : Fragment(), OnMapReadyCallback {
             .get()
             .addOnSuccessListener { result ->
                 lateinit var coordinatesZoom: LatLng
-                for (document in result) {
-                    mMap.addMarker(
-                        MarkerOptions()
-                            .position(
-                                LatLng(
-                                    document.data["latitude"].toString().toDouble(),
-                                    document.data["longitude"].toString().toDouble()
+                if (!result.isEmpty) {
+                    for (document in result) {
+                        mMap.addMarker(
+                            MarkerOptions()
+                                .position(
+                                    LatLng(
+                                        document.data["latitude"].toString().toDouble(),
+                                        document.data["longitude"].toString().toDouble()
+                                    )
                                 )
-                            )
-                            .title(document.data["direction"].toString())
+                                .title(document.data["direction"].toString())
+                        )
+
+                        // Atrapa última coordenada para el animatedCamera con Zoom
+                        coordinatesZoom = LatLng(
+                            document.data["latitude"].toString().toDouble(),
+                            document.data["longitude"].toString().toDouble()
+                        )
+                    }
+
+                    mMap.animateCamera(
+                        CameraUpdateFactory.newLatLngZoom(coordinatesZoom, 16f),
+                        4000,
+                        null
                     )
 
-                    // Atrapa última coordenada para el animatedCamera con Zoom
-                    coordinatesZoom = LatLng(
-                        document.data["latitude"].toString().toDouble(),
-                        document.data["longitude"].toString().toDouble()
+                } else {
+                    // Mostrar el problema al user
+                    NotificationDialog(
+                        "Upps!",
+                        "Aún no se han registrado ubicaciones en el servidor"
+                    ).show(
+                        childFragmentManager,
+                        NotificationDialog.TAG
                     )
                 }
 
-                mMap.animateCamera(
-                    CameraUpdateFactory.newLatLngZoom(coordinatesZoom, 18f),
-                    4000,
-                    null
-                )
             }
             .addOnFailureListener { exception ->
+                // Error
                 Log.d("FIRESTORE-ERROR", "Error getting documents: ", exception)
+                NotificationDialog(
+                    "Upps!",
+                    "Estamos experimentando problemas con el servidor, intente mas tarde por favor"
+                ).show(
+                    childFragmentManager,
+                    NotificationDialog.TAG
+                )
             }
-
     }
 
 }

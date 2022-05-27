@@ -21,6 +21,7 @@
     <dimen name="custom_size_15dp">15dp</dimen>
     <dimen name="custom_size_18dp">18dp</dimen>
     <dimen name="custom_size_20dp">20dp</dimen>
+    <dimen name="custom_size_30dp">30dp</dimen>
     <dimen name="custom_size_230dp">230dp</dimen>
 
     <!-- Tamaños en sp -->
