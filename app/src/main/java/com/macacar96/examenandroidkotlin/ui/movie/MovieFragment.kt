@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.macacar96.examenandroidkotlin.databinding.FragmentMovieBinding
 import com.macacar96.examenandroidkotlin.retrofit.response.MovieResponse
+import com.macacar96.examenandroidkotlin.room.entity.MovieEntity
 
 class MovieFragment : Fragment(), MovieMVP.View {
 
@@ -40,7 +41,7 @@ class MovieFragment : Fragment(), MovieMVP.View {
     }
 
     // Método que trae el resultado de la respuesta
-    override fun showResultView(result: List<MovieResponse?>?, size: Int) {
+    override fun showResultView(result: List<MovieEntity?>?, size: Int) {
         activity?.runOnUiThread(Runnable {
             //Toast.makeText(activity, "Datos cargado con éxito: $size", Toast.LENGTH_LONG).show()
 
@@ -48,7 +49,7 @@ class MovieFragment : Fragment(), MovieMVP.View {
             _binding.pbLoading.visibility = View.GONE
             _binding.rvMovies.visibility = View.VISIBLE
 
-            adapter = MovieAdapter(result as List<MovieResponse>, _binding!!.root.context)
+            adapter = MovieAdapter(result as List<MovieEntity>, _binding!!.root.context)
             _binding.rvMovies.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
             _binding.rvMovies.adapter = adapter
         })

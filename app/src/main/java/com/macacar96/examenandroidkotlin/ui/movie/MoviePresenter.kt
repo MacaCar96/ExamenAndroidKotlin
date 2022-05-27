@@ -2,13 +2,14 @@ package com.macacar96.examenandroidkotlin.ui.movie
 
 import android.content.Context
 import com.macacar96.examenandroidkotlin.retrofit.response.MovieResponse
+import com.macacar96.examenandroidkotlin.room.entity.MovieEntity
 
 class MoviePresenter(view: MovieMVP.View): MovieMVP.Presenter {
 
     private var mView: MovieMVP.View = view
     private var mInteractor: MovieMVP.Interactor = MovieInteractor(this)
 
-    override fun showResultPresenter(result: List<MovieResponse?>?, size: Int) {
+    override fun showResultPresenter(result: List<MovieEntity?>?, size: Int) {
         if (mView != null) {
             mView.showResultView(result, size)
         }
@@ -24,10 +25,6 @@ class MoviePresenter(view: MovieMVP.View): MovieMVP.Presenter {
         if (mView != null) {
             mInteractor.getDataPeliculasInteractor(context)
         }
-    }
-
-    override fun getInitPresenter(context: Context?) {
-        TODO("Not yet implemented")
     }
 
 }

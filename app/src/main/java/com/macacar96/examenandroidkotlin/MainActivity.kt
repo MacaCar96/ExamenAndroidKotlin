@@ -68,14 +68,14 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
-        // Crear una referencia de LocationManager
+        /*// Crear una referencia de LocationManager
         locationManager = getSystemService(LOCATION_SERVICE) as LocationManager?
 
         // Check permisos de ubicación
         isLocationEnabled()
 
         // Al entrar a la App se manda a consultar e insertar ubicación cada 15 min
-        requestLocationUpdates()
+        requestLocationUpdates()*/
     }
 
     // Validate permiso
